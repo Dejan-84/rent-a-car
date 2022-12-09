@@ -3,7 +3,7 @@
 spl_autoload_register('myAutoloader');
 
 function myAutoloader($className){
-    $path = 'classes/';
+    $path = 'Classes/';
     $extension = '.php';
     $fullPath = $path . $className . $extension;
 

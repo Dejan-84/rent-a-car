@@ -4,12 +4,12 @@ error_reporting(0);
 session_start();
 
 include_once('config/app.php');
-include_once('Classes/Database.php');
+include 'includes/autoloader.php';
 
 // CREATE CONNECTION
-//$conn = new Baza();
-$conn = new mysqli(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
-//var_dump($conn);die;
+$conn = new Baza();
+
+
 
 // GET CONNECTION ERRORS
 if ($conn->connect_error) {
@@ -20,7 +20,11 @@ $sql = "SELECT * FROM cars";
 
 
 // FETCHING DATA FROM DATABASE
-$result = $conn->query($sql);
+$result = $conn->custom_query($sql);
+       
+if(!$result) {
+  $message .=  'Error query.';
+}
 
 
 
