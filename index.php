@@ -132,7 +132,7 @@ if(!$result) {
 		                <input type="text" class="form-control" id="time_pick" name="pick-up time" placeholder="Time">
 		              </div>
 
-                  <div class="text-danger">
+                  <div class="text-white">
                   </div>
 			            <div class="form-group">
 			              <button type="submit" name="submit" class="btn btn-secondary py-3 px-4">Rent A Car</button>

@@ -24,7 +24,7 @@ function prazna_polja(array $form_inputs) {
 
 			
 
-			$message .= 'You did not entered ' .$key. "<br>";
+			$message .= 'You did not choose ' .$key. "<br>";
 		}
 	}
 
@@ -32,6 +32,10 @@ function prazna_polja(array $form_inputs) {
 
 		$status = 0;
 		$response['message'] = $message;
+	}else{
+
+		$status = 1;
+		$response['redirect_url'] = 'car_match.php';
 	}
 
 	$response['status'] = $status;

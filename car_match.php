@@ -12,17 +12,13 @@ if(isset($_POST['start-date']) && isset($_POST['end-date'])){
 	$end_date = date('Y-m-d', strtotime($end));
     
 	include_once('config/app.php');
-	include_once('Classes/Database.php');
+	include 'includes/autoloader.php';
+
 
 	// CREATE CONNECTION
 	$conn = new Baza();
-	//$conn = new mysqli(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
 	
-
-	// GET CONNECTION ERRORS
-	if ($conn->connect_error) {
-	die("Connection failed: " . $conn->connect_error);
-	}
+	
 	
 	$sql = "SELECT * FROM cars WHERE (start  NOT BETWEEN  '$start_date'  AND  '$end_date'  AND (end  NOT BETWEEN  '$start_date'  AND  '$end_date')) ";
     

@@ -25,7 +25,7 @@ $(document).ready(function() {
                 }
                 else{
 
-                    $('.text-danger').html(response.message);
+                    $('.text-white').html(response.message);
                 }
             }
 

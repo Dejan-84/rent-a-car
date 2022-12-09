@@ -13,7 +13,7 @@ if (isset($_POST['form'])) {
 
     include '../includes/function.php';
 
-    var_dump($form);die;
+    //var_dump($form);die;
     //UPIT ZA PROVERU PRAZNIH POLJA
     $provera = prazna_polja($form);
 
@@ -21,6 +21,11 @@ if (isset($_POST['form'])) {
 
       $validation = false;
       $message .= $provera['message'];
+    }else{
+      $validation = true;
+      $url = $provera['redirect_url'];
+      $response['redirect_url'] = $url;
+
     }
 
     $response['status'] = $validation;
