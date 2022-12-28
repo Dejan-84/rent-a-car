@@ -35,6 +35,8 @@ function prazna_polja(array $form_inputs) {
 	}else{
 
 		$status = 1;
+		$_SESSION['start-date'] = $form_inputs['start-date'];
+		$_SESSION['end-date'] = $form_inputs['end-date'];
 		$response['redirect_url'] = 'car_match.php';
 	}
 

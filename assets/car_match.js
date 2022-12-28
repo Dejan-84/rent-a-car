@@ -20,7 +20,7 @@ $(document).ready(function() {
 
                 if(response.status) {
                     
-                    alert(response.message);
+                   // alert(response.message);
                     window.location.href = response.redirect_url;
                 }
                 else{

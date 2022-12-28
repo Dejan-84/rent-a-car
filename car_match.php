@@ -1,12 +1,12 @@
 <?php
 
 error_reporting(0);
+session_start();
 
-
-if(isset($_POST['start-date']) && isset($_POST['end-date'])){
-
-	$start = $_POST['start-date'];
-	$end = $_POST['end-date'];
+if(isset($_SESSION['start-date']) && isset($_SESSION['end-date'])){
+    
+	$start = $_SESSION['start-date'];
+	$end = $_SESSION['end-date'];
 
 	$start_date = date('Y-m-d', strtotime($start));
 	$end_date = date('Y-m-d', strtotime($end));
