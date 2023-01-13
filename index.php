@@ -98,9 +98,9 @@ if(!$result) {
 	  						<form id="register-form" action="javascript:void(0);" method="post" class="request-form ftco-animate bg-primary">
 		          		<h2>Make your trip</h2>
 			    				<div class="form-group">
-			    					<label for="" class="label">Pick-up location</label>
+			    					<label for="" class="label">Take location</label>
 			    					
-                    <select class="form-control" id="pickuplist" name="pick-up location">
+                    <select class="form-control" id="pickuplist" name="take-location" >
                       <option class="moja" selected>City, Airport, Station, etc</option>
                       <option class="moja" value="1">Airport-Nikola Tesla</option>
                       <option class="moja" value="2">Borča</option>
@@ -108,9 +108,9 @@ if(!$result) {
                     </select>
 			    				</div>
 			    				<div class="form-group">
-			    					<label for="" class="label">Drop-off location</label>
+			    					<label for="" class="label">Return location</label>
 			    					
-                    <select class="form-control" id="dropofflist" name="drop-off location">
+                    <select class="form-control" id="dropofflist" name="return-location">
                       <option class="moja" selected>City, Airport, Station, etc</option>
                       <option class="moja" value="1">Airport-Nikola Tesla</option>
                       <option class="moja" value="2">Borča</option>
@@ -129,10 +129,10 @@ if(!$result) {
 		              </div>
 		              <div class="form-group">
 		                <label for="" class="label">Pick-up time</label>
-		                <input type="text" class="form-control" id="time_pick" name="pick-up time" placeholder="Time">
+		                <input type="text" class="form-control" id="time_pick" name="get-time" placeholder="Time">
 		              </div>
 
-                  <div class="text-white">
+                  <div class="text-white font-weight-light h10">
                   </div>
 			            <div class="form-group">
 			              <button type="submit" name="submit" class="btn btn-secondary py-3 px-4">Rent A Car</button>

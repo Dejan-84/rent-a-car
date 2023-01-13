@@ -3,7 +3,7 @@
 session_start();
 
 if (isset($_POST['form'])) {
-
+   //var_dump($_POST['form']);die;
     $validation = true;
     $message = '';
     $response = array();

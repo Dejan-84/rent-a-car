@@ -20,11 +20,11 @@ function prazna_polja(array $form_inputs) {
 
 		if ($key == 'submit') continue;
 
-		if ($value == '') {
+		if ($value == '' || $value === 'City, Airport, Station, etc') {
 
 			
 
-			$message .= 'You did not choose ' .$key. "<br>";
+			$message .= "You didn't fill " .$key. "<br>";
 		}
 	}
 
