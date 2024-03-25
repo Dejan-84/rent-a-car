@@ -10,7 +10,7 @@ class Baza
     public function __construct()
     {
 
-        $this->db_conn = new mysqli(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
+        $this->db_conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         
  
         if ($this->db_conn->connect_error) {
